@@ -28,7 +28,7 @@
       var element = event.target;
 
       points = +points + +element.getAttribute("value");
-      console.log(+points);
+      alert(+points);
       if (points === randomNumberToGuess) {
         alert("You Win!!");
         wins = wins + 1;
