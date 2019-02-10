@@ -23,6 +23,7 @@
     $("#image-three").attr("value", Math.floor(Math.random() * 12) + 1);
     $("#image-four").attr("value", Math.floor(Math.random() * 12) + 1);
 
+    $("img").off();
     $("img").on("click", function(event) {
       var element = event.target;
 
@@ -31,13 +32,11 @@
       if (points === randomNumberToGuess) {
         alert("You Win!!");
         wins = wins + 1;
-
         game();
       }
       if (randomNumberToGuess < points) {
         alert("You Lose!!");
         losses = losses + 1;
-
         game();
       }
     });
